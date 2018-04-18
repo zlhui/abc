@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	ul{list-style:none;margin:0;padding:0;}
+	.banner img{width:14.775rem;height:11.725rem;}
+	#box{width:14.775rem;height:11.725rem;border:1px solid red;overflow: hidden;position: relative;margin:0 auto;}
+	#gund{width:434.25rem;position:absolute;top:0;transition: linear .2s;}
+	.banner ul li{float:left;}
+	</style>
+</head>
+<body>
+	<div class="banner" id="box">
+			<ul id="gund" style="left:0">
+				<li><img src="image/tu1.png"></li>	
+				<li><img src="image/tu1.png"></li> 	
+				<li><img src="image/tu1.png"></li>	
+			</ul>
+	</div>
+	<script>
+		function $(id){
+			return document.getElementById(id);
+		}
+		var gund=$('gund');
+		var t=null;
+		var speed=-14.775;
+		t=setInterval(function(){
+			var left=gund.offsetLeft;
+			if(left<-29.1){
+				gund.style.left='0';
+			}else{
+				gund.style.left=left+speed+'rem';
+			}
+		},2000)
+	</script>
+</body>
+</html>
