@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/commom.css">
+	<link rel="stylesheet" href="font/iconfont.css">
+	<link rel="stylesheet" href="css/pad.css" media="(min-width:768px)">
+	<link rel="stylesheet" href="css/pc.css" media="(min-width:1024px)">
+</head>
+<body>
+	<div class="header gWidth">
+		<div class="logo fl"></div>
+		<div class="h_rt fr">
+			<p class="pd_hide">
+				<span>菜单</span>
+				<i class="iconfont">&#xe612;</i>
+				<i class="iconfont fdj">&#xe627;</i>
+			</p>
+			<div class="srk sj_hide pd_show">
+				<input type="text">
+				<i class="iconfont fdj">&#xe627;</i>
+			</div>
+		</div>
+	</div>
+	<ul class="nav gWidth clearfix" id="tabe">
+		<li><a href="#">购买</a><i></i>
+			<dl>
+				<dd>下拉</dd>
+				<dd>下拉</dd>
+				<dd>下拉</dd>
+			</dl>
+		</li>
+		<li><a href="#">产品</a><i></i>
+			<dl>
+				<dd>下拉</dd>
+				<dd>下拉</dd>
+				<dd>下拉</dd>
+			</dl>
+		</li>
+		<li><a href="#">下载</a><i></i>
+			<dl>
+				<dd>下拉</dd>
+				<dd>下拉</dd>
+				<dd>下拉</dd>
+			</dl>
+		</li>
+		<li><a href="#">支持</a><i></i>
+			<dl>
+				<dd>下拉</dd>
+				<dd>下拉</dd>
+				<dd>下拉</dd>
+			</dl>
+		</li>
+	</ul>
+	<script>
+		function $(id){
+			return document.getElementById(id);
+		}
+
+		var oli = $('tabe').getElementsByTagName('li');
+		var odl = $('tabe').getElementsByTagName('dl');
+		var oliLen=oli.length;
+		for( var i=0;i<oliLen;i++){
+			oli[i].index=i;
+			oli[i].onclick=function(){
+			if(odl[this.index].style.display=='block'){
+				odl[this.index].style.display='none';
+			}else{
+				odl[this.index].style.display='block';
+			}
+		}
+		}
+	</script>
+	<div class="banner">
+		<div class="banner_t">
+			<img src="images/ph_banner.png" class="pd_hide">
+			<img src="images/pd_banner.png" class="sj_hide pd_show">
+		</div>
+		<div class="banner_x">
+			<div class="text">
+				<h3>Surface</h3>
+				<p>了解能够用取代您的笔记本电脑的平板电脑 Suface pro3</p>
+				<a>了解详情</a>
+			</div>
+		</div>
+	</div>
+	<ul class="content_o gWidth">
+		<li>
+			<img src="images/ph_san.png">
+			<p>以低廉的价格购买 offoci pro个人版</p>
+		</li>
+		<li>
+			<img src="images/ph_san.png">
+			<p>以低廉的价格购买 offoci pro个人版</p>
+		</li>
+		<li>
+			<img src="images/ph_san.png">
+			<p>以低廉的价格购买 offoci pro个人版</p>
+		</li>
+		<li class="zh pd_hide">
+			<dl>
+				<dd>
+					<i class="iconfont blue">&#xe659;</i>
+					<p>Windows</p>
+				</dd>
+				<dd>
+					<i class="iconfont orange">&#xe709;</i>
+					<p>Office</p>
+				</dd>
+				<dd>
+					<i class="iconfont hui">&#xe91b;</i>
+					<p>Surface</p>
+				</dd>
+				<dd>
+					<i class="iconfont zi">&#xe659;</i>
+					<p>windows phone</p>
+				</dd>
+				<dd>
+					<i class="iconfont blue">&#xe7f2;</i>
+					<p>Skype</p>
+				</dd>
+			</dl>
+		</li>
+	</ul>
+	<div class="content_t gWidth clearfix sj_hide pd_sho">
+		<div class="cont_lt">
+			<h3>了解</h3>
+			<ul>
+				<li>Windows</li>
+				<li>Office</li>
+				<li>Surface</li>
+				<li>windows phone</li>
+				<li>Skype</li>
+			</ul>
+		</div>
+		<div class="cont_rt">
+			<div class="cont_rt_t">
+				<p><span class="act">适用于家中</span><span>适用于工作地点</span></p>
+				<ul class="ulo">
+					<li><img src="images/pd_at.png"><span>获取微软商城官方购物免运费优惠</span></li>
+					<li><img src="images/pd_at1.png"><span>获取微软商城官方购物免运费优惠</span></li>
+					<li><img src="images/pd_at2.png"><span>获取微软商城官方购物免运费优惠，在更多设备上使用office</span></li>
+				</ul>
+			</div>
+			<ul class="cont_rt_b">
+				<li>
+					<h3>下载</h3>
+					<p>所有office下载</p>
+					<p>所有windows下载</p>
+					<p>微软中国下载中心</p>
+				</li>
+				<li>
+					<h3>安全与更新</h3>
+					<p>所有office下载</p>
+					<p>所有windows下载</p>
+					<p>微软中国下载中心</p>
+				</li>
+				<li>
+					<h3>支持</h3>
+					<p>所有office下载</p>
+					<p>所有windows下载</p>
+					<p>微软中国下载中心</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="content_e">
+		<div class="content_ee gWidth">
+			<div class="wlcs">
+			<div class="ph_gz pd_hide">
+				<div class="tupian">
+					<img src="images/ph_gz.jpg">
+				</div>
+				<div class="wenzi">
+					<h6>住建部与微软共探未来城市评估体系，助力智慧竞争</h6>
+					<p>2014年4月23日，北京--今天，首届"未来城市.智慧竞争"研讨会在北京顺利举行。研讨会由住房和城乡建设部与微软合作成立的智慧城市技术解决方案联合实验室办，集中探讨未来城市的智慧竞争之道，为中国的未来城市的发展指明方向。</p>
+				</div>
+			</div>
+			<div class="pd_gz sj_hide pd_show">
+				<div class="tupian">
+					<img src="images/pd_gz.png">
+				</div>
+				<div class="wenzi">
+					<h6>住建部与微软共探未来城市评估体系，助力智慧竞争</h6>
+					<p>2014年4月23日，北京--今天，首届"未来城市.智慧竞争"研讨会在北京顺利举行。研讨会由住房和城乡建设部与微软合作成立的智慧城市技术解决方案联合实验室办，为中国的未来城市的发展指明方向为中国的未来城市的发展指明方向。</p>
+				</div>
+			</div>
+		</div>
+		<div class="gzwr">
+			<h3>关注微软</h3>
+			<span>公司新闻</span>
+			<span>微软@社交媒体</span>
+		</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="cont_qt gWidth clearfix">
+			<div class="cont_qt_lt">
+			<h6>其他微软站点</h6>
+			<dl>
+				<dd>
+					<i class="iconfont blue">&#xe659;</i>
+					<span>Windows</span>
+				</dd>
+				<dd>
+					<i class="iconfont orange">&#xe709;</i>
+					<span>Office</span>
+				</dd>
+				<dd>
+					<i class="iconfont hui">&#xe91b;</i>
+					<span>Surface</span>
+				</dd>
+				<dd>
+					<i class="iconfont zi">&#xe659;</i>
+					<span>windows phone</span>
+				</dd>
+				<dd>
+					<i class="iconfont blue">&#xe7f2;</i>
+					<span>Skype</span>
+				</dd>
+				<dd>
+					<i class="iconfont hui">&#xe7f2;</i>
+					<span>Skype</span>
+				</dd>
+				<dd>
+					<i class="iconfont blue">&#xe617;</i>
+					<span>Nokia 设备</span>
+				</dd>
+				<dd>
+					<i class="iconfont zi">&#xe53f;</i>
+					<span>Skype</span>
+				</dd>
+			</dl>
+			</div>
+			<ul class="cont_qt_rt">
+			<li>
+				<h6>下载</h6>
+				<dl>
+					<dd>所有Windows下载</dd>
+					<dd>Office(Outlook,Excel 和其他)</dd>
+					<dd>免费下载</dd>
+					<dd>Internet Explorer</dd>
+					<dd>驱动程序（声音，打印机，USB 和其他）</dd>
+				</dl>
+			</li>
+			<li class="sj_hide pd_show">
+				<h6>支持</h6>
+				<dl>
+					<dd>微软帮助与支持</dd>
+					<dd>微软安全软件</dd>
+					<dd>免费下载</dd>
+					<dd>Internet Explorer</dd>
+					<dd>驱动程序（声音，打印机，USB 和其他）</dd>
+				</dl>
+				<h6>关于</h6>
+				<dl>
+					<dd>关于微软</dd>
+					<dd>微软安全软件</dd>
+					<dd>免费下载</dd>
+					<dd>Internet Explorer</dd>
+					<dd>订阅微软电子期刊</dd>
+					<dd>免费下载</dd>
+				</dl>
+			</li>
+			<li>
+				<h6>热门资源</h6>
+				<dl>
+					<dd>Windows Phone h和智能电话</dd>
+					<dd>Office(Outlook,Excel 和其他)</dd>
+					<dd>Windows 软件</dd>
+					<dd>Internet Explorer</dd>
+					<dd>驱动程序（声音，打印机，USB 和其他）</dd>
+					<dd>Office(Outlook,Excel 和其他)</dd>
+					<dd>Windows 软件</dd>
+					<dd>Internet Explorer</dd>
+					<dd>pc</dd>
+				</dl>
+			</li>
+			</ul>
+		</div>
+		<div class="footer_q gWidth">
+			<p>中文-中国</p>
+			<h4>Microsoft</h4>
+		</div>
+		<div class="footer_b gWidth">
+			<span class="jing">京ICP备09042378号</span>
+			<span>京公网安备11011212123154</span>
+			<p><a href="#">与我们联系</a><a href="#">隐私权声明</a><a href="#">与我们联系</a><a href="#">有关我们的广告信息</a><span>@2014Misofc</span></p>
+		</div>
+	</div>
+</body>
+</html>

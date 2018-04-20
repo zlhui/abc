@@ -1,0 +1,55 @@
+@charset "utf-8";
+.header{height:53px;line-height:53px;padding:0 16px 0 5px;}
+.header .logo{background:url(../images/ph_logo.png);width:115px;height:24px;margin-top:16px;}
+.header .h_rt{color:#1570A5;}
+.header .h_rt .fdj{margin-left:19px;}
+.nav li{min-height:40px;line-height:40px;background:#1570A5;margin-bottom:1px;}
+.nav li a{color:white;font-size:15px;padding-left:12px;}
+.nav li i{display:inline-block;background:url(../images/xl.png);width:10px;height:5px;vertical-align: middle;}
+.nav li dl{position:relative;width:100%;z-index: 5;display: none;}
+.nav li dl dd{height:40px;line-height:40px;color:#fff;margin-left: 0;}
+/*.nav li:hover dl{display: block;}*/
+.banner{width:100%;}
+.banner .banner_t{height:179px;margin-top:6px;}
+.banner .banner_t img{height:179px;width:100%;}
+.banner .banner_x{background:#1570A5;color:white;line-height:23px;} 
+.banner .banner_x .text{width:235px;height:115px;padding:12px 45px 12px 40px;}
+.banner .banner_x .text p{margin-top:20px;}
+.banner .banner_x .text a{display:inline-block;margin-top:16px;}
+.content_o{margin:23px 7px 0 4px;color:#1570A5;font-size:14px;height:860px;}
+.content_o li{height:184px;}
+.content_o img{width:100%;height:154px;}
+.content_o li p{line-height:30px;}
+.content_o .zh{min-height:263px;margin-bottom:28px;}
+.content_o .zh .iconfont{font-size:49px;}
+.content_o li dl dd{float:left;margin-top:49px;width:24.3%;}
+.content_o li dl p{width:71px;line-height:23px;}
+.content_e{background:#1570A5;padding:25px 7px 28px 7px;color:white;}
+.content_e .wlcs{background:rgba(17,94,138,.5);width:306px;padding:17px 23px 20px 15px;}
+.content_e .wlcs .tupian{float:left;}
+.content_e .wlcs .wenzi h6{font-size:20px;font-weight: normal;margin-left:147px;}
+.content_e .wlcs .wenzi p{font-size:14px;line-height:25px;}
+.content_e .gzwr h3{height:79px;line-height:79px;}
+.content_e .gzwr span{display:block;line-height:32px;}
+.footer{background:#EEEEEE;}
+.cont_qt .cont_qt_lt{margin-bottom:37px;}
+.cont_qt .cont_qt_lt h6{font-size:16px;height:46px;line-height:46px;font-weight:normal;margin-left:5px;}
+.cont_qt .cont_qt_lt dd{margin-left:7px;line-height:34px;}
+.cont_qt .cont_qt_lt dd .iconfont{font-size:25px;margin-right:12px;}
+.cont_qt_rt h6{font-size:16px;height:46px;line-height:46px;font-weight:normal;margin-left:5px;}
+.cont_qt_rt dd{margin-left:7px;color:#1570A5;font-size:12px;height:24px;line-height:24px;}
+.footer_q p{color:blue;background:url(../images/qiu.png)no-repeat left center;padding-left:35px;font-size:12px;height:76px;line-height:76px;}
+.footer_q h4{height:56px;line-height:56px;}
+.footer_q{margin-left:7px;}
+.footer_b{margin-left:7px;font-size:12px;width:248px;}
+.footer_b span{display:block;line-height:27px;}
+.footer_b p a{padding:0 28px 13px 0;font-size:12px;color:blue;}
+
+
+
+
+
+
+
+
+.sj_hide{display:none;}
