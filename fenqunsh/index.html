@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta id="viewport" name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="font/iconfont.css">
+	<script>
+	   
+    window.onload = window.onresize = function(){		 
+        var view_width = document.getElementsByTagName('html')[0].getBoundingClientRect().width;
+		//找到标签名为html的第一个
+        var _html = document.getElementsByTagName('html')[0];
+		//如果屏幕宽度大于640 
+		//就用 640/16=40
+		//小于640的时候 不确定 也是尺寸/40
+        view_width>640?_html.style.fontSize = 640 / 16 + 'px':_html.style.fontSize = view_width / 16 + 'px';
+		//最大网页尺寸640 
+		//最大字体（根字体大小） 40
+    }
+</script>
+</head>
+<body>
+	<header>
+		<div class="hd_tp">
+			<i class="iconfont fl ht">&#xe61d;</i>
+			<h3 class="fl">Woman,Dresses</h3>
+			<div class="gwc fr">
+				<i class="iconfont gw">&#xe708;</i>
+				<span>3</span>
+			</div>
+		</div>
+		<div class="hd_bm">
+			<div class="bt1 fl">add to wishlist</div>
+			<div class="bt2 fr">add to cart</div>
+		</div>
+	</header>
+	<div class="banner">
+			<div id="box">
+				<ul id="gund" style="left:0">
+					<li><img src="image/tu1.png"></li>	
+					<li><img src="image/tu1.png"></li> 	
+					<li><img src="image/tu1.png"></li>	
+				</ul>
+			</div>
+			<script>
+		function $(id){
+			return document.getElementById(id);
+		}
+		var gund=$('gund');
+		var t=null;
+		var speed=-14.775;
+		t=setInterval(function(){
+			var left=gund.offsetLeft;
+			if(left<-29.55){
+				gund.style.left='0';
+			}else{
+				gund.style.left=left+speed+'rem';
+			}
+		},2000)
+	</script>
+		<p class="b_bm">
+			<span class="fl">Elegant Pink Dresses</span>
+			<a class="bt3 fr">$605,50</a>
+		</p>
+	</div>
+	<div class="cont">
+		<i class="iconfont jh">&#xe600;</i><span>Description</span>
+	</div>
+	<div class="cont2">
+		<div class="cont2_tp">
+			<h4>Colour:</h4>
+			<p class="choose">Choose a colour for item</p>
+			<ul class="fk1">
+				<li><img src="image/yu2.png"></li>
+				<li><img src="image/yu2.png"></li>
+				<li><img src="image/yu2.png"></li>
+			</ul>
+		</div>
+		<div class="cont2_bm">
+			<h4>Size:</h4>
+			<p class="choose">Size available for this item</p>
+			<ul class="fk1">
+				<li><span>6</span></li>
+				<li><span class="bl">8</span></li>
+				<li><span>10</span></li>
+				<li><span>12</span></li>
+				<li><span>14</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="bt4">
+		<span>Add to Cart</span>
+	</div>
+	<div class="share">
+		<h5>share on</h5>
+		<span class="xian"></span>
+	</div>
+	<ul class="foot">
+		<li class="mr">
+			<img src="image/f1.png">
+			<img src="image/ff.gif" class="sp">
+		</li>
+		<li class="mr">
+			<img src="image/f2.png">
+			<img src="image/ff.gif" class="sp">
+		</li>
+		<li>
+			<img src="image/f3.png">
+			<img src="image/ff.gif" class="sp">
+		</li>
+	</ul>
+</body>
+</html>

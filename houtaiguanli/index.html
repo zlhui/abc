@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta id="viewport" name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=0">
+	<link rel="stylesheet" href="font/iconfont.css">
+	<link rel="stylesheet" href="css/style.css">
+	   <script>
+    window.onload = window.onresize = function(){		 
+        var view_width = document.getElementsByTagName('html')[0].getBoundingClientRect().width;
+		//找到标签名为html的第一个
+        var _html = document.getElementsByTagName('html')[0];
+		//如果屏幕宽度大于640 
+		//就用 640/16=40
+		//小于640的时候 不确定 也是尺寸/40
+        view_width>640?_html.style.fontSize = 640 / 16 + 'px':_html.style.fontSize = view_width / 16 + 'px';
+		//最大网页尺寸640 
+		//最大字体（根字体大小） 40
+    }
+</script>
+</head>
+<body>
+	<header>
+		<p class="fl"><i class="iconfont">&#xe60c;</i><a href="#">返回</a></p>
+		<h3>无极软件后台管理系统</h3>
+		<i class="iconfont fr">&#xe609;</i>
+	</header>
+	<div class="head_bm">
+		<i class="iconfont bl">&#xe65a;</i>
+		<span>软件市场</span>
+	</div>
+	<div class="content">
+		<div class="conto">
+			<h3>硬件大师</h3>
+			<ul>
+				<li class="imag"><img src="image/yingj.png"></li>
+				<li><span class="zhong bl">硬件大师</span></li>
+				<li><p class="lan"><i class="iconfont">&#xe635;</i><span>我要开卡</span></p></li>
+				<li><p class="lv"><i class="iconfont">&#xe64f;</i><span>已开卡密</span></p></li>
+			</ul>
+		</div>
+		<div class="conto">
+			<h3>无极</h3>
+			<ul>
+				<li class="imag2"><img src="image/wj.png"></li>
+				<li><span class="zhong bl">普通版专业</span></li>
+				<li><p class="lan"><i class="iconfont">&#xe635;</i><span>我要开卡</span></p></li>
+				<li><p class="lv"><i class="iconfont">&#xe64f;</i><span>已开卡密</span></p></li>
+			</ul>
+			<ul>
+				<li><span class="zhong bl">硬件大师</span></li>
+				<li><p class="lan"><i class="iconfont">&#xe635;</i><span>我要开卡</span></p></li>
+				<li><p class="lv"><i class="iconfont">&#xe64f;</i><span>已开卡密</span></p></li>
+			</ul>
+		</div>
+		<div class="conto">
+			<h3>挂机宝</h3>
+			<ul>
+				<li class="imag2"><img src="image/gjb.png"></li>
+				<li><span class="zhong bl">硬件大师</span></li>
+				<li><p class="lan"><i class="iconfont">&#xe635;</i><span>我要开卡</span></p></li>
+				<li><p class="lv"><i class="iconfont">&#xe64f;</i><span>已开卡密</span></p></li>
+			</ul>
+			<ul>
+				<li><span class="zhong bl">硬件大师</span></li>
+				<li><p class="lan"><i class="iconfont">&#xe635;</i><span>我要开卡</span></p></li>
+				<li><p class="lv"><i class="iconfont">&#xe64f;</i><span>已开卡密</span></p></li>
+			</ul>
+		</div>
+		<div class="conto">
+			<h3>变机宝</h3>
+			<ul>
+				<li class="imag"><img src="image/bjb.png"></li>
+				<li><span class="zhong bl">硬件大师</span></li>
+				<li><p class="lan"><i class="iconfont">&#xe635;</i><span>我要开卡</span></p></li>
+				<li><p class="lv"><i class="iconfont">&#xe64f;</i><span>已开卡密</span></p></li>
+			</ul>
+		</div>
+	</div>
+	<ul class="footer" id="ft">
+		<li class="dj">
+			<span class="act"><i class="iconfont">&#xe69c;</i><a href="#">我的</a></span>
+			<ul>
+				<li><i class="iconfont">&#xe69c;</i><a href="#">账户</a></li>
+				<li><i class="iconfont">&#xe69a;</i><a href="#">充值</a></li>
+				<li><i class="iconfont">&#xe6be;</i><a href="#">流水</a></li>
+				<li><i class="iconfont">&#xe61a;</i><a href="#">柳树</a></li>
+				<li><i class="iconfont">&#xe745;</i><a href="#">充值</a></li>
+			</ul>
+		</li>
+		<li class="dj"><span><i class="iconfont">&#xe69a;</i><a href="#">开卡</a></span>
+			<ul>
+				<li><i class="iconfont">&#xe69c;</i><a href="#">账户</a></li>
+				<li><i class="iconfont">&#xe69a;</i><a href="#">充值</a></li>
+				<li><i class="iconfont">&#xe6be;</i><a href="#">流水</a></li>
+				<li><i class="iconfont">&#xe61a;</i><a href="#">柳树</a></li>
+				<li><i class="iconfont">&#xe745;</i><a href="#">充值</a></li>
+			</ul>
+		</li>
+		<li class="dj"><span><i class="iconfont">&#xe6be;</i><a href="#">订单</a></span>
+			<ul>
+				<li><i class="iconfont">&#xe69c;</i><a href="#">账户</a></li>
+				<li><i class="iconfont">&#xe69a;</i><a href="#">充值</a></li>
+				<li><i class="iconfont">&#xe6be;</i><a href="#">流水</a></li>
+				<li><i class="iconfont">&#xe61a;</i><a href="#">柳树</a></li>
+				<li><i class="iconfont">&#xe745;</i><a href="#">充值</a></li>
+			</ul>
+		</li>
+	</ul>
+	<script>
+		function $(id){
+			return document.getElementById(id);
+		}
+		var odj = $('ft').getElementsByClassName('dj');
+		var oul = $('ft').getElementsByTagName('ul');
+		var odjLen=odj.length;
+		for(var i=0;i<odjLen;i++){
+			odj[i].index=i;
+			odj[i].onclick=function(){
+               if(oul[this.index].style.display =='block'){
+               		oul[this.index].style.display ='none';
+               }else{
+               	oul[this.index].style.display = 'block';
+               }
+			}
+		}
+	</script>
+</body>
+</html>
