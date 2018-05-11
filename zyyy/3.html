@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>图片浏览</title>
+  <style>
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+   .lunbo {
+    margin: 10px auto;
+    width: 960px;
+    height: 441px;
+    position: relative;
+    overflow: hidden;
+  }
+  .lunbo .imgs {
+    margin: 20px auto;
+    height: 441px; /*图片高度*/
+    width: 960px; /*所有图片所占总宽度*/
+  }
+  .lunbo .img {
+    float: left;
+    height: 441px; /*图片高度*/
+    width: 320px; /*默认每幅图片显示宽度*/
+    background-position: center;
+    cursor: pointer;
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+  }
+  .lunbo .shadow {
+    position: absolute;
+    font-size:10px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 15%;
+    line-height:15%;
+    box-sizing: border-box;
+    padding: 20px;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    text-align:center;
+  }
+  .lunbo .shadow i{color:orange;}
+  .lunbo .shadow p{font-size:10px;margin-top:-10px;}
+  .lunbo .shadow span{display:inline-block;width:104px;height:26px;background:orange;color:white;line-height:26px;text-align:center;font-size:12px;}
+  .lunbo .pre,.nex {
+    position: absolute;
+    top: 197px;
+    border:26px solid transparent;
+    
+  }
+ .lunbo .pre {
+    left:182px;
+    border-color:transparent #91918F transparent transparent;
+  }
+  .lunbo .nex {
+    right:182px;
+    border-color:transparent transparent transparent #91918F;
+  }
+  </style>
+</head>
+<body>
+  <!-- 方便使用JS或PHP修改图片地址，将图片地址放到HTML属性中 -->
+<div class="lunbo">
+  <ul class="imgs">
+    <li class="img" style="background-image:url('image/banner.gif')">
+      <div class="shadow">
+        <p><i>☆☆☆☆☆</i>3次评分</p>
+        <span>立即阅读</span>
+      </div>
+      </li>
+    <li class="img act" style="background-image:url('image/banner.gif')"><div class="shadow" style="line-height: 12px">纳智捷大7 SUV正式上市，共推出07/08/008亮排量五款车型</div></li>
+    <li class="img" style="background-image:url('image/banner.gif')"><div class="shadow">
+      <h4 style="line-height:14px;margin-top:-10px;">东北名品</h4>
+      <p style="line-height:14px;">纳智捷大7 SUV正式上市，共推出07/08/008亮排量五款车型</p>
+    </div></li>
+  </ul>
+    <a href="###" class="pre"></a>
+    <a href="###" class="nex"></a>
+</div>
+  <script src="libs/jquery.min.js"></script>
+  <script>
+  // 完全展开图片宽度590 其余被挤压图片宽度155
+  $('.img').hover(function() {
+    $(this).width(660).siblings().width(150);
+    // $(this).find('.shadow').hide();
+  }, function() {
+    $('.img').width(320);
+    // $('.shadow').show();
+  });
+  </script>
+</body>
+</html>
