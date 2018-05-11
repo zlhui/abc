@@ -9,16 +9,16 @@
 .db_z a:hover{color:#E9725E;}
 .header{height:63px;}
 .header .hd_lt{width:237px;height:63px;}
-.header .hd_rt{padding:11px 0 11px 0;}
+.header .hd_rt{padding:18px 0 11px 0;margin-right:11px;width:704px;}
 .header .hd_rt_tp{height:19px;margin-left:8px;}
-.header .hd_rt_tp li{float:left;border-right:1px dashed #EAEAEA;padding-bottom:7px;padding-right:8px;line-height:10px;}
-.header .hd_rt_tp li a span{color:black;margin-left:10px;font-size:10px;}
-/*.header .hd_rt_bm{height:17px;}*/
-.header .hd_rt_bm a,span{color:#959595;margin-left:9px;font-size:10px;}
+.header .hd_rt_tp li{float:left;border-right:1px dashed #EAEAEA;padding-bottom:7px;padding-right:3px;line-height:10px;}
+.header .hd_rt_tp li a span{color:black;margin-left:5px;font-size:12px;}
+.header .hd_rt_bm{height:17px;font-size:0;}
+.header .hd_rt_bm a,span{color:#959595;margin-left:6px;font-size:10px;}
 /*.header a span:hover{color:#E9725E;}*/
 .header a:hover{color:#E9725E;}
 .sousu{background:url(../image/tiao.png);height:40px;padding-left:10px;}
-.sousu li{padding-left:15px;float:left;border-right:1px solid black;padding-right:16px;height:22px;margin-top:9px;}
+.sousu li{padding-left:15px;float:left;border-right:1px solid black;padding-right:11px;height:22px;margin-top:6px;}
 .sousu a{font-size:10px;color:white;}
 .sanjiao{display:inline-block;border-color:transparent transparent transparent #989898;border-style:solid;border-width:5px;}
 .sousu .kuang{width:133px;height:19px;background:white;font-size:10px;}
@@ -26,7 +26,7 @@
 .sousu .cz:after{content:'';position:absolute;width:40px;height:19px;border:1px solid #BB2D00;left:-2px;top:-2px;}
 .sousu div select{width:92px;height:17px;background:white;border:1px solid blue;font-size:10px;color:#ccc;}
 .sousu div{position:relative;display:inline-block;}
-.sousu i{width:15px;height:15px;position: absolute;top:5px;left:75px;}
+.sousu i{width:15px;height:15px;position: absolute;top:50%;margin-top:-6px;left:75px;}
 .sousu .bor{border:none;}
 .sousu .bor span{padding:0 5px;}
 .act{background:red;}
@@ -36,7 +36,7 @@
 .xbanner #buttons{width:100%;position: absolute;bottom:0;height:39px;background:rgba(0,0,0,.5);}
 .xbanner .jiaodian{color:white;height:39px;margin-left:20px;position: absolute;bottom:-6px;}
 .xbanner #buttons i{display:inline-block;width:23px;height:23px;margin-top:10px;}
-.banner{height:441px;}
+.banner{height:441px;margin-top:-10px;}
    .lunbo {
     margin: 10px auto;
     width: 960px;
@@ -47,12 +47,16 @@
   .lunbo .imgs {
     margin: 20px auto;
     height: 441px; /*图片高度*/
-    width: 960px; /*所有图片所占总宽度*/
+    width: 3305px; /*所有图片所占总宽度*/
+    position: absolute;
+  }
+  .lunbo .imgs li{
+    float:left;
   }
   .lunbo .img {
     float: left;
     height: 441px; /*图片高度*/
-    width: 320px; /*默认每幅图片显示宽度*/
+    width: 661px; /*默认每幅图片显示宽度*/
     background-position: center;
     cursor: pointer;
     transition: .5s;
@@ -66,7 +70,6 @@
     bottom: 0;
     width: 100%;
     height: 15%;
-    line-height:15%;
     box-sizing: border-box;
     padding: 20px;
     background: rgba(0,0,0,.5);
@@ -83,11 +86,11 @@
     
   }
  .lunbo .pre {
-    left:182px;
+    left:91px;
     border-color:transparent #91918F transparent transparent;
   }
   .lunbo .nex {
-    right:182px;
+    right:91px;
     border-color:transparent transparent transparent #91918F;
   }
 .wrapper{
@@ -159,6 +162,7 @@
 	width: 960px;
 	height:217px;
 	margin: 0 auto;
+	margin-top:20px;
 	padding-bottom: 50px;
 	background:url(../image/beijing.png) no-repeat;
 }
@@ -235,7 +239,7 @@
 .red{color:red;font-size:18px;}
 .cont_tp_rt{line-height:39px;font-size:14px;margin-right:15px;}
 .cont_tp_rt i{font-style: none;}
-.cont_bm {height:175px;padding:13px 9px 9px 20px;border:1px solid #ccc;border-top:none;}
+.cont_bm {height:198px;padding:13px 9px 9px 20px;border:1px solid #ccc;border-top:none;}
 .cont_bm li{float:left;}
 .cont_bm .chez{width:182px;height:152px;}
 .cont_bm .ydq{font-size:12px;text-align:right;line-height:42px;}

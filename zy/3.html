@@ -19,12 +19,16 @@
   .lunbo .imgs {
     margin: 20px auto;
     height: 441px; /*图片高度*/
-    width: 960px; /*所有图片所占总宽度*/
+    width: 3305px; /*所有图片所占总宽度*/
+    position: absolute;
+  }
+  .lunbo .imgs li{
+    float:left;
   }
   .lunbo .img {
     float: left;
     height: 441px; /*图片高度*/
-    width: 320px; /*默认每幅图片显示宽度*/
+    width: 661px; /*默认每幅图片显示宽度*/
     background-position: center;
     cursor: pointer;
     transition: .5s;
@@ -55,11 +59,11 @@
     
   }
  .lunbo .pre {
-    left:182px;
+    left:91px;
     border-color:transparent #91918F transparent transparent;
   }
   .lunbo .nex {
-    right:182px;
+    right:91px;
     border-color:transparent transparent transparent #91918F;
   }
   </style>
@@ -67,7 +71,7 @@
 <body>
   <!-- 方便使用JS或PHP修改图片地址，将图片地址放到HTML属性中 -->
 <div class="lunbo">
-  <ul class="imgs">
+  <ul class="imgs" style="left:-512px">
     <li class="img" style="background-image:url('image/banner.gif')">
       <div class="shadow">
         <p><i>☆☆☆☆☆</i>3次评分</p>
@@ -79,19 +83,42 @@
       <h4 style="line-height:14px;margin-top:-10px;">东北名品</h4>
       <p style="line-height:14px;">纳智捷大7 SUV正式上市，共推出07/08/008亮排量五款车型</p>
     </div></li>
+    <li class="img act" style="background-image:url('image/banner.gif')"><div class="shadow" style="line-height: 12px">纳智捷大7 SUV正式上市，共推出07/08/008亮排量五款车型</div></li>
+    <li class="img" style="background-image:url('image/banner.gif')"><div class="shadow">
+      <h4 style="line-height:14px;margin-top:-10px;">东北名品</h4>
+      <p style="line-height:14px;">纳智捷大7 SUV正式上市，共推出07/08/008亮排量五款车型</p>
+    </div></li>
   </ul>
     <a href="###" class="pre"></a>
     <a href="###" class="nex"></a>
 </div>
-  <script src="libs/jquery.min.js"></script>
+  <script src="libss/jquery.min.js"></script>
   <script>
-  // 完全展开图片宽度590 其余被挤压图片宽度155
-  $('.img').hover(function() {
-    $(this).width(660).siblings().width(150);
-    // $(this).find('.shadow').hide();
-  }, function() {
-    $('.img').width(320);
-    // $('.shadow').show();
+  var index=0;
+  var speed=200;
+  var w=$('.lunbo .imgs .img').width();
+  var n=$('.imgs').find('li').size();
+  // $('.imgs').width(w*n).css('left','-'+w+'px');
+  function move(direction) {
+    direction=='+'?index--:index++;
+    $('.imgs').animate({
+      left: direction+'='+661+'px'},
+      speed, function() {
+      if($('.imgs').css('left')=='-1173px'){
+        $('.imgs').css('left','-512px');
+        // index=0;
+      }
+      if($('.imgs').css('left')=='0px'){
+        $('.imgs').css('left','-1834px');
+        // index=n-3;
+      }
+    });
+  }
+  $('.pre').click(function() {
+    move('+');
+  });
+  $('.nex').click(function() {
+    move('-');
   });
   </script>
 </body>

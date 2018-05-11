@@ -134,32 +134,58 @@
 		</div>
 		<div class="banner">
 			<div class="lunbo">
- 			 <ul class="imgs">
- 			   <li class="img" style="background-image:url('image/banner.gif')">
- 			     <div class="shadow">
- 			       <p><i>☆☆☆☆☆</i>3次评分</p>
- 			       <span>立即阅读</span>
- 			     </div>
- 			     </li>
+  			<ul class="imgs" style="left:-512px">
+  			  <li class="img" style="background-image:url('image/banner.gif')">
+  			    <div class="shadow">
+  			      <p><i>☆☆☆☆☆</i>3次评分</p>
+  			      <span>立即阅读</span>
+  			    </div>
+  			    </li>
  			   <li class="img act" style="background-image:url('image/banner.gif')"><div class="shadow" style="line-height: 12px">纳智捷大7 SUV正式上市，共推出07/08/008亮排量五款车型</div></li>
  			   <li class="img" style="background-image:url('image/banner.gif')"><div class="shadow">
- 			     <h4 style="line-height:14px;margin-top:-10px;">东北名品</h4>
+ 			     <h4 style="line-height:31px;margin-top:-10px;">东北名品</h4>
  			     <p style="line-height:14px;">纳智捷大7 SUV正式上市，共推出07/08/008亮排量五款车型</p>
  			   </div></li>
+ 			   <li class="img act" style="background-image:url('image/banner.gif')"><div class="shadow" style="line-height: 12px">纳智捷大7 SUV正式上市，共推出07/08/008亮排量五款车型</div></li>
+ 			   <li class="img" style="background-image:url('image/banner.gif')">
+  			    <div class="shadow">
+  			      <p><i>☆☆☆☆☆</i>3次评分</p>
+  			      <span>立即阅读</span>
+  			    </div>
+  			    </li>
  			 </ul>
  			   <a href="###" class="pre"></a>
  			   <a href="###" class="nex"></a>
 			</div>
 			<script src="libs/jquery.min.js"></script>
  			 <script>
- 			 // 完全展开图片宽度590 其余被挤压图片宽度155
- 			 $('.img').hover(function() {
- 			   $(this).width(660).siblings().width(150);
- 			   // $(this).find('.shadow').hide();
- 			 }, function() {
- 			   $('.img').width(320);
- 			   // $('.shadow').show();
- 			 });
+				  var index=0;
+				  var speed=200;
+				  var t=null;
+				  var w=$('.lunbo .imgs .img').width();
+				  var n=$('.imgs').find('li').size();
+				  // $('.imgs').width(w*n).css('left','-'+w+'px');
+				  function move(direction) {
+				    direction=='+'?index--:index++;
+				    $('.imgs').animate({
+				      left: direction+'='+661+'px'},
+				      speed, function() {
+				      if($('.imgs').css('left')=='-1173px'){
+				        $('.imgs').css('left','-512px');
+				        // index=0;
+				      }
+				      if($('.imgs').css('left')=='0px'){
+				        $('.imgs').css('left','-1834px');
+				        // index=n-3;
+				      }
+				    });
+				  }
+				  $('.pre').click(function() {
+				    move('+');
+				  });
+				  $('.nex').click(function() {
+				    move('-');
+				  });
  			 </script>
 		</div>
 		<div class="che">
