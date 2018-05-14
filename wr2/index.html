@@ -9,7 +9,13 @@
 	<link rel="stylesheet" href="font/iconfont.css">
 	<link rel="stylesheet" href="css/pad.css" media="(min-width:768px)">
 	<link rel="stylesheet" href="css/pc.css" media="(min-width:1024px)">
-
+	<link rel="stylesheet" href="swiper/swiper.css">
+	<style>
+		.swiper-container img{
+			width: 100%;
+			height: 100%;
+		}
+</style>
 </head>
 <body>
 	<div class="header gWidth">
@@ -77,8 +83,67 @@
 	</script>
 	<div class="banner">
 		<div class="banner_t">
-			<img src="images/ph_banner.png" class="pd_hide">
-			<img src="images/pd_banner.png" class="sj_hide pd_show">
+				<div class="swiper-container">
+				    <div class="swiper-wrapper">
+				        <div class="swiper-slide"><img src="images/ph_banner.png" alt=""></div>
+				        <div class="swiper-slide"><img src="images/ph_banner.png" alt=""></div>
+				        <div class="swiper-slide"><img src="images/ph_banner.png" alt=""></div>    
+				    </div>
+				    <!-- 如果需要分页器 -->
+				    <div class="swiper-pagination"></div>
+				    
+				    <!-- 如果需要导航按钮 -->
+				    <div class="swiper-button-prev"></div>
+				    <div class="swiper-button-next"></div>
+				    
+				    <!-- 如果需要滚动条 -->
+				    <div class="swiper-scrollbar"></div>
+				</div>
+
+				
+			<script src="swiper/swiper.min.js"></script>
+
+			<script>        
+			  var mySwiper = new Swiper ('.swiper-container', {
+			    direction: 'horizontal',
+			    loop: true,
+				effect : 'cube',
+			   cubeEffect: {
+			    slideShadows: true,
+			    shadow: true,
+			    shadowOffset: 100,
+			    shadowScale: 0.6
+			  },
+				
+			    autoplay: {
+			    delay: 2000,
+			    stopOnLastSlide: false,
+			    disableOnInteraction: false,
+			    },
+			    // 如果需要分页器
+			    pagination: {
+			      el: '.swiper-pagination',
+			    },
+			    
+			    // 如果需要前进后退按钮
+			    navigation: {
+			      nextEl: '.swiper-button-next',
+			      prevEl: '.swiper-button-prev',
+			    },
+			    
+			    // 如果需要滚动条
+			    scrollbar: {
+			      el: '.swiper-scrollbar',
+			    },
+			  })        
+			  </script>
+			  
+			  
+			  
+			<!--  http://www.swiper.com.cn-->
+
+
+			<!--http://www.layui.com/  mui-->
 		</div>
 		<div class="banner_x">
 			<div class="text">
