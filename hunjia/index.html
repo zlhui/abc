@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>婚嫁</title>
+	<link rel="stylesheet" type="text/css" href="css/gonggong.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+	<div class="db gWidth">
+		<h1>易畅婚嫁</h1>
+		<small>专业结婚门户网站</small>
+	</div>
+	<div class="head">
+		<ul class="header gWidth">
+			<li><a href="#">易畅首页</a></li>
+			<li><a href="#">易畅首页</a></li>
+			<li><a href="#">易畅首页</a></li>
+			<li><a href="#">易畅首页</a></li>
+			<li><a href="#">易畅首页</a></li>
+			<li><a href="#">易畅首页</a></li>
+			<li><a href="#">易畅首页</a></li>
+			<li><a href="#">易畅首页</a></li>
+			<li><a href="#">易畅首页</a></li>
+			<li><a href="#">易畅首</a></li>
+			<li><a href="#">易畅首页</a></li>
+			<li class="hou"><a href="#">易畅首页</a></li>
+		</ul>
+	</div>
+	<div class="content gWidth">
+		<div class="banner">
+			<div class="banner_lt fl">
+				<div id="focus">
+    				<ul>
+    				  <li><a href="" target="_blank"><img src="image/ban1.png" alt=""></a></li>
+    				  <li><a href="" target="_blank"><img src="image/ban1.png" alt=""></a></li>
+    				  <li><a href="" target="_blank"><img src="image/ban1.png" alt=""></a></li>
+    				  <li><a href="" target="_blank"><img src="image/ban1.png" alt=""></a></li>
+    				  <li><a href="" target="_blank"><img src="image/ban1.png" alt=""></a></li>
+    				</ul>
+  				</div>
+  				<script type="text/javascript" src="js/jquery.js"></script>
+				<script type="text/javascript">
+				  $(function() {
+				  var sWidth = $("#focus").width(); //获取焦点图的宽度（显示面积）
+				  var len = $("#focus ul li").length; //获取焦点图个数
+				  var index = 0;
+				  var picTimer;
+				  
+				  //以下代码添加数字按钮和按钮后的半透明条，还有上一页、下一页两个按钮
+				  var btn = "<div class='btnBg'></div><div class='btn'>";
+				  for(var i=0; i < len; i++) {
+					  btn += "<span></span>";
+				  }
+				  btn += "</div><div class='preNext pre'></div><div class='preNext next'></div>";
+				  $("#focus").append(btn);
+				  $("#focus .btnBg").css("opacity",0.5);
+
+				  //为小按钮添加鼠标滑入事件，以显示相应的内容
+				  $("#focus .btn span").css("opacity",0.4).mouseover(function() {
+					  index = $("#focus .btn span").index(this);
+					  showPics(index);
+				  }).eq(0).trigger("mouseover");
+
+				  //上一页、下一页按钮透明度处理
+				  $("#focus .preNext").css("opacity",0.2).hover(function() {
+					  $(this).stop(true,false).animate({"opacity":"0.5"},300);
+				  },function() {
+					  $(this).stop(true,false).animate({"opacity":"0.2"},300);
+				  });
+
+				  //上一页按钮
+				  $("#focus .pre").click(function() {
+					  index -= 1;
+					  if(index == -1) {index = len - 1;}
+					  showPics(index);
+				  });
+
+				  //下一页按钮
+				  $("#focus .next").click(function() {
+					  index += 1;
+					  if(index == len) {index = 0;}
+					  showPics(index);
+				  });
+
+				  //图片为左右滚动，即所有li元素都是在同一排向左浮动，所以这里需要计算出外围ul元素的宽度
+				  $("#focus ul").css("width",sWidth * (len));
+				  
+				  //鼠标滑上焦点图时停止自动播放，滑出时开始自动播放
+				  $("#focus").hover(function() {
+					  clearInterval(picTimer);
+				  },function() {
+					  picTimer = setInterval(function() {
+						  showPics(index);
+						  index++;
+						  if(index == len) {index = 0;}
+					　　  },4000); //此4000代表自动播放的间隔，单位：毫秒
+				  }).trigger("mouseleave");
+				  
+				  //显示图片函数，根据接收的index值显示相应的内容
+				  function showPics(index) { //普通切换
+					var nowLeft = -index*sWidth; //根据index值计算ul元素的left值
+					//使用animate()方法调整ul元素滚动到计算出的position
+					$("#focus ul").stop(true,false).animate({"left":nowLeft},300); 
+					//为当前的按钮切换到选中的效果
+					$("#focus .btn span").stop(true,false).animate({"opacity":"0.4"},300)
+					　.eq(index).stop(true,false).animate({"opacity":"1"},300); 
+				  }
+					});
+				</script>
+			</div>
+			<div class="banner_rt fr">
+				<div class="banner_rt_tp">
+					<h5 class="fl">合作商家</h5>
+					<span class="fr">我要加入</span>
+				</div>
+				<ul class="banner_rt_bm">
+					<li>红月亮点藏岁月儿童影</li>
+					<li>爱神婚纱摄影 <span>7折</span></li>
+					<li>富乐宝 <span>9折</span></li>
+					<li>拜天地婚礼策划 <span>8折</span></li>
+					<li>小可爱专业儿童摄影</li>
+					<li>慧怡祥瑞婚庆 <span>8折</span></li>
+					<li>红月亮点藏岁月儿童影</li>
+					<li>红月亮点藏岁月儿童影</li>
+					<li>红月亮点藏岁月儿童影</li>
+					<li>爱神婚纱摄影 <span>7折</span></li>
+					<li>富乐宝 <span>9折</span></li>
+					<li>拜天地婚礼策划 <span>8折</span></li>
+					<li>小可爱专业儿童摄影</li>
+					<li>慧怡祥瑞婚庆 <span>8折</span></li>
+					<li>红月亮点藏岁月儿童影</li>
+					<li>婚纱随便挑底片随便选摄影工作室</li>
+					<li>红月亮点藏岁月儿童影</li>
+					<li>红月亮点藏岁月儿童影</li>
+				</ul>
+			</div>
+		</div>
+		<div class="hunq">
+			<h5>婚庆公司</h5>
+			<ul>
+				<li><a href="#"><img src="image/hq1.png"></a></li>
+				<li><a href="#"><img src="image/hq2.png"></a></li>
+				<li><a href="#"><img src="image/hq3.png"></a></li>
+				<li><a href="#"><img src="image/hq2.png"></a></li>
+				<li><a href="#"><img src="image/hq5.png"></a></li>
+				<li><a href="#"><img src="image/hq3.png"></a></li>
+				<li><a href="#"><img src="image/hq1.png"></a></li>
+				<li><a href="#"><img src="image/hq2.png"></a></li>
+				<li><a href="#"><img src="image/hq3.png"></a></li>
+				<li><a href="#"><img src="image/hq2.png"></a></li>
+				<li><a href="#"><img src="image/hq5.png"></a></li>
+				<li><a href="#"><img src="image/hq3.png"></a></li>
+			</ul>
+		</div>
+		<ul class="huns">
+			<li class="huns_lt">
+				<h5>婚纱摄影</h5>
+				<div class="huns_lt_bm">
+					<div class="tupian fl">
+						<!-- <img src="image/huns1.png"> -->
+						<a href="image/huns1.png" class="tooltip" title="婚纱摄影"><img src="image/huns1.png" alt="婚纱摄影" /></a>
+					</div>
+					<div class="wz fr">
+						<h6>陪伴与懂得比爱情更贵</h6>
+						<p>有人说，“陪伴才是最好的爱，比起我懂，我来，我能都要来得弥足珍贵的，是我在，这城市太大，门槛太多，他和她都一个人跑了好远，是在到不了远方都没关系”</p>
+						<div class="wz2">
+							<p>招聘摄像后期，全职兼职均可</p>
+							<p>懂你的人，会用你所需要的方式去爱你</p>
+							<p>招聘摄像后期，全职兼职均可</p>
+							<p>懂你的人，会用你所需要的方式去爱你</p>
+						</div>
+						<ul>
+							<li>
+								<img src="image/huns1-2.png">
+								<p class="xp">日本传统婚礼</p>
+							</li>
+							<li>
+								<img src="image/huns1-2.png">
+								<p class="xp">日本传统婚礼</p>
+							</li>
+							<li>
+								<img src="image/huns1-2.png">
+								<p class="xp">日本传统婚礼</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li class="huns_lt">
+				<h5>婚庆服务</h5>
+				<div class="huns_lt_bm">
+					<div class="tupian fl">
+						<!-- <img src="image/huns2.png"> -->
+						<a href="image/huns2.png" class="tooltip" title="婚庆服务"><img src="image/huns2.png" alt="婚庆服务" /></a>
+					</div>
+					<div class="wz fr">
+						<h6>陪伴与懂得比爱情更贵</h6>
+						<p>有人说，“陪伴才是最好的爱，比起我懂，我来，我能都要来得弥足珍贵的，是我在，这城市太大，门槛太多，他和她都一个人跑了好远，是在到不了远方都没关系”</p>
+						<div class="wz2">
+							<p>招聘摄像后期，全职兼职均可</p>
+							<p>懂你的人，会用你所需要的方式去爱你</p>
+							<p>招聘摄像后期，全职兼职均可</p>
+							<p>懂你的人，会用你所需要的方式去爱你</p>
+						</div>
+						<ul>
+							<li>
+								<img src="image/huns1-2.png">
+								<p class="xp">日本传统婚礼</p>
+							</li>
+							<li>
+								<img src="image/huns1-2.png">
+								<p class="xp">日本传统婚礼</p>
+							</li>
+							<li>
+								<img src="image/huns1-2.png">
+								<p class="xp">日本传统婚礼</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li class="huns_lt">
+				<h5>婚纱摄影</h5>
+				<div class="huns_lt_bm">
+					<div class="tupian fl">
+						<!-- <img src="image/huns1.png"> -->
+						<a href="image/huns1.png" class="tooltip" title="婚纱摄影"><img src="image/huns1.png" alt="婚纱摄影" /></a>
+					</div>
+					<div class="wz fr">
+						<h6>陪伴与懂得比爱情更贵</h6>
+						<p>有人说，“陪伴才是最好的爱，比起我懂，我来，我能都要来得弥足珍贵的，是我在，这城市太大，门槛太多，他和她都一个人跑了好远，是在到不了远方都没关系”</p>
+						<div class="wz2">
+							<p>招聘摄像后期，全职兼职均可</p>
+							<p>懂你的人，会用你所需要的方式去爱你</p>
+							<p>招聘摄像后期，全职兼职均可</p>
+							<p>懂你的人，会用你所需要的方式去爱你</p>
+						</div>
+						<ul>
+							<li>
+								<img src="image/huns1-2.png">
+								<p class="xp">日本传统婚礼</p>
+							</li>
+							<li>
+								<img src="image/huns1-2.png">
+								<p class="xp">日本传统婚礼</p>
+							</li>
+							<li>
+								<img src="image/huns1-2.png">
+								<p class="xp">日本传统婚礼</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li class="huns_lt">
+				<h5>婚庆服务</h5>
+				<div class="huns_lt_bm">
+					<div class="tupian fl">
+						<!-- <img src="image/huns2.png"> -->
+						<a href="image/huns2.png" class="tooltip" title="婚庆服务"><img src="image/huns2.png" alt="婚庆服务" /></a>
+					</div>
+					<div class="wz fr">
+						<h6>陪伴与懂得比爱情更贵</h6>
+						<p>有人说，“陪伴才是最好的爱，比起我懂，我来，我能都要来得弥足珍贵的，是我在，这城市太大，门槛太多，他和她都一个人跑了好远，是在到不了远方都没关系”</p>
+						<div class="wz2">
+							<p>招聘摄像后期，全职兼职均可</p>
+							<p>懂你的人，会用你所需要的方式去爱你</p>
+							<p>招聘摄像后期，全职兼职均可</p>
+							<p>懂你的人，会用你所需要的方式去爱你</p>
+						</div>
+						<ul>
+							<li>
+								<img src="image/huns1-2.png">
+								<p class="xp">日本传统婚礼</p>
+							</li>
+							<li>
+								<img src="image/huns1-2.png">
+								<p class="xp">日本传统婚礼</p>
+							</li>
+							<li>
+								<img src="image/huns1-2.png">
+								<p class="xp">日本传统婚礼</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<script type="text/javascript">
+			$(function(){
+			  var x = 10;
+			  var y = 20;
+			  $("a.tooltip").mouseover(function(e){
+				this.myTitle = this.title;
+				this.title = "";	
+				var imgTitle = this.myTitle? "<div style='text-align: center;'>" + this.myTitle+"</div>" : "";
+				var tooltip = "<div id='tooltip'><img src='"+ this.href +"' alt='产品预览图'/>"+imgTitle+"<\/div>"; //创建 div 元素
+				$("body").append(tooltip);	//把它追加到文档中						 
+				$("#tooltip")
+				  .css({
+					"top":(e.pageY+y)+"px",
+					"left":(e.pageX+x)+"px"
+				  }).show("fast");	  //设置x坐标和y坐标，并且显示
+			}).mouseout(function(){
+				this.title = this.myTitle;	
+				$("#tooltip").remove();	 //移除 
+			  }).mousemove(function(e){
+				$("#tooltip")
+				.css({
+				  "top":(e.pageY+y) + "px",
+				  "left":(e.pageX+x)  + "px"
+				  });
+			  });
+			})
+		</script>
+		<div class="huny">
+			<h5>婚纱影楼</h5>
+			<ul>
+				<li><img src="image/huny1.png"></li>
+				<li><img src="image/huny2.png"></li>
+				<li><img src="image/huny3.png"></li>
+				<li><img src="image/huny4.png"></li>
+				<li class="wenz">
+					<div class="top">
+						<h5 class="fl">婚车租赁</h5>
+						<a href="#" class="fr">更多</a>
+					</div>
+					<ul class="bottom">
+						<li>本人 新购奥迪a61 16 款 望加入平谷婚</li>
+						<li>平谷人自己组建的红马车队</li>
+						<li>个人红色宝马3系。奥迪TT ...用车请</li>
+						<li>本人 新购奥迪a61 16 款 望加入平谷婚</li>
+						<li>平谷人自己组建的红马车队</li>
+						<li>个人红色宝马3系。奥迪TT ...用车请</li>
+						<li>本人 新购奥迪a61 16 款 望加入平谷婚</li>
+						<li>平谷人自己组建的红马车队</li>
+					</ul>
+				</li>
+				<li><img src="image/huny5.png"></li>
+				<li><img src="image/huny6.png"></li>
+				<li><img src="image/huny1.png"></li>
+				<li><img src="image/huny3.png"></li>
+				<li class="wenz">
+					<div class="top">
+						<h5 class="fl">婚车租赁</h5>
+						<a href="#" class="fr">更多</a>
+					</div>
+					<ul class="bottom">
+						<li>本人 新购奥迪a61 16 款 望加入平谷婚</li>
+						<li>平谷人自己组建的红马车队</li>
+						<li>个人红色宝马3系。奥迪TT ...用车请</li>
+						<li>本人 新购奥迪a61 16 款 望加入平谷婚</li>
+						<li>平谷人自己组建的红马车队</li>
+						<li>个人红色宝马3系。奥迪TT ...用车请</li>
+						<li>本人 新购奥迪a61 16 款 望加入平谷婚</li>
+						<li>平谷人自己组建的红马车队</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="xfsj">
+			<h5>幸福瞬间</h5>
+			<div class="xfsj_bm">
+				<div class="xfsj_lt fl">
+					<img src="image/xfsj1.png">
+					<img src="image/xfsj2.png" class="mt">
+				</div>
+				<ul class="xfsj_rt fr">
+					<li><img src="image/xfsj3.png"></li>
+					<li><img src="image/xfsj3.png"></li>
+					<li class="ml"><img src="image/xfsj3.png"></li>
+					<li class="hou"><img src="image/xfsj4.png"></li>
+					<li class="hou2"><img src="image/xfsj4.png"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="neirong gWidth">
+			<p><a href="#">关于我们</a><span>|</span><a href="#">友情链接</a><span>|</span><a href="#">服务条款</a><span>|</span><a href="#">隐私政策</a><span>|</span><a href="#">关于我们</a><span>|</span><a href="#">关于我们</a><span>|</span><a href="#">关于我们</a><span>|</span><a href="#">关于我们</a><span>|</span></p>
+			<p>网上道德遵守《全国人大常委会关于维护互联网安全的决定》及中华人名共和国其他各项有关法律规定</p>
+			<p>Copyright 2005-2014 echeng cn All right reserved 宜昌网版权所有</p>
+			<p>网上道德遵守《全国人大常委会关于维护互联网安全的决定》及中华人名共和国其他各项有关法律规定</p>
+			<p>Copyright 2005-2014 echeng cn All right reserved 宜昌网版权所有</p>
+		</div>
+	</div>
+</body>
+</html>
