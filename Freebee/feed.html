@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>feed</title>
+	<link rel="stylesheet" href="css/comm.css">
+	<meta id="viewport" name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/feed_style.css">
+       <script>
+    	window.onload = window.onresize = function(){		 
+        var view_width = document.getElementsByTagName('html')[0].getBoundingClientRect().width;
+		//找到标签名为html的第一个
+        var _html = document.getElementsByTagName('html')[0];
+		//如果屏幕宽度大于640 
+		//就用 640/16=40
+		//小于640的时候 不确定 也是尺寸/40
+        view_width>640?_html.style.fontSize = 640 / 16 + 'px':_html.style.fontSize = view_width / 16 + 'px';
+		//最大网页尺寸640 
+		//最大字体（根字体大小） 40
+    }
+</script>
+</head>
+<body>
+	<div class="main">
+		<div class="left">
+			<div class="search">
+				<input type="text" placeholder="Search">
+				<span class="iconfont icon-suosou"></span>		
+			</div>
+			<div class="data">
+				<div class="img">
+					<img src="images/tu2.png" alt="">
+				</div>
+				<h3>Carmen Electra</h3>
+				<p class="iconfont icon-weizhi"><span>Los Angeles, CA</span></p>
+			</div>
+			<div class="btn"><span class="active"></span></div>
+			<div class="btn"><span></span></div>
+			<ul>
+				<li class="active"><div class="img fl">
+					<img src="images/tb1.png" alt="">
+				</div>Feed <span></span></li>
+				<li><div class="img fl">
+					<img src="images/hl.png" alt="">
+				</div>Explore <span class="active">5</span></li>
+				<li><div class="img fl">
+					<img src="images/tb3.png" alt="">
+				</div>Friends <span></span></li>
+				<li><div class="img fl">
+					<img src="images/tb2.png" alt="">
+				</div>Rewards <span></span></li>
+				<li><div class="img fl">
+					<img src="images/bs.png" alt="">
+				</div>Settings <span></span></li>
+			</ul>
+		</div>
+		<div class="rigth">
+			<header class="clearfix">
+				<div class="menu iconfont icon-caidan fl">
+					<span>5</span>
+				</div>
+				<div class="logo">
+					<img src="images/logo1.png" alt="">
+				</div>
+			</header>
+			<div class="centent mt">
+				<div class="img">
+					<img src="images/tu1.png" alt="">
+					<div class="cent_btm clearfix">
+						<div class="portrait fl">
+							<img src="images/tx.png" alt="">
+						</div>
+						<div class="Introduction fl">
+						<h3>Jesica Alba</h3>
+						<p class="iconfont icon-weizhi"><span>Los Angeles,CA</span></p>
+						</div>
+						<div class="time fr iconfont icon-shizhong">
+							<span>2m</span>
+						</div>
+					</div>
+				</div>
+				<div class="cen_menu">
+					<ul>
+						<li class="iconfont icon-xihuan"></li>
+						<li class="iconfont icon-xiaoxi"></li>
+						<li class="iconfont icon-im_fenxiang_b"></li>
+						<li><a  class="iconfont icon-shixincaidan" href="freebee.html"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="centent">
+			<div class="img">
+				<img src="images/tu1.png" alt="">
+				<div class="cent_btm clearfix">
+					<div class="portrait fl">
+						<img src="images/tx.png" alt="">
+					</div>
+					<div class="Introduction fl">
+						<h3>Jesica Alba</h3>
+						<p class="iconfont icon-weizhi"><span>Los Angeles,CA</span></p>
+					</div>
+					<div class="time fr iconfont icon-shizhong">
+						<span>2m</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="cen_menu">
+				<ul>
+					<li class="iconfont icon-xihuan"></li>
+					<li class="iconfont icon-xiaoxi"></li>
+					<li class="iconfont icon-im_fenxiang_b"></li>
+					<li><a  class="iconfont icon-shixincaidan" href="freebee.html"></a></li>
+				</ul>
+			</div>
+			</div>
+			<div class="centent mb">
+			<div class="img">
+				<img src="images/tu1.png" alt="">
+				<div class="cent_btm clearfix">
+					<div class="portrait fl">
+						<img src="images/tx.png" alt="">
+					</div>
+					<div class="Introduction fl">
+						<h3>Jesica Alba</h3>
+						<p class="iconfont icon-weizhi"><span>Los Angeles,CA</span></p>
+					</div>
+					<div class="time fr iconfont icon-shizhong">
+						<span>2m</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="cen_menu">
+				<ul>
+					<li class="iconfont icon-xihuan"></li>
+					<li class="iconfont icon-xiaoxi"></li>
+					<li class="iconfont icon-im_fenxiang_b"></li>
+					<li><a  class="iconfont icon-shixincaidan" href="freebee.html"></a></li>
+				</ul>
+			</div>
+			</div>
+			<footer>
+				<ul class="clearfix">
+					<li class="active"><span class="iconfont icon-home1 "></span></li>
+					<li ><span class="iconfont icon-shizhong-fill"></span></li>
+					<li ><span class="iconfont icon-xiangji"></span></li>
+					<li ><span class="iconfont icon-xinfeng-kai-shi"></span></li>
+					<li ><span class="iconfont icon-star_full"></span></li>
+				</ul>
+			</footer>
+		</div>
+	</div>
+	<script src="jq/jquery.min.js"></script>
+	<script src="jq/menu.js"></script>
+	<script src="jq/qzsp.js"></script>
+</body>
+</html>
